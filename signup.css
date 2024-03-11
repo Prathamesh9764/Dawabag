@@ -1,0 +1,183 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: rgb(135, 153, 235);
+}
+.navbar {
+  position: fixed;
+  display: flex;
+  background-color: #333;
+  overflow: hidden;
+  align-items: center;
+  padding: 14px 10px;
+  /* justify-content: space-evenly; */
+  width: 100%;
+  height: 20px;
+  
+}
+
+.company_name {
+  margin-left: 15px;
+  color: #71a9e9;
+  text-align: center;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+.nav_content {
+  display: flex;
+    margin-left: auto;
+    margin-right: 0;
+   
+}
+
+.nav_content a {
+  text-align: center;
+  text-decoration: none;
+  color: #f2f2f2;
+  /* padding-left: 5px;
+  padding-right: 8px; */
+  margin-right: 20px;
+}
+
+.cart_content{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: 10px;
+}
+
+.cart_content p{
+  color: #f2f2f2;
+  margin-right: 20px;
+}
+
+/* section */
+
+.container {
+  display: flex;
+  flex-direction: column; /* Ensure items stack vertically on smaller screens */
+  align-items: center; /* Center items horizontally */
+  padding-top: 40px;
+}
+
+.side_image {
+  max-width: 50%; /* Limit width to 50% of the container */
+  margin-bottom: 20px; /* Add some space between sections */
+}
+
+.side_image img {
+  width: 100%;
+  height: auto;
+}
+
+.login {
+  max-width: 500px; /*Set a maximum width for the login section */
+  padding: 5px;
+  box-sizing: border-box; /* Include padding in the width calculation */
+  border-radius: 10px;
+  background-color: white;
+  /* box-shadow: 10px 10px 10px 10px  navy; */
+}
+
+@media (min-width: 678px) {
+  .container {
+    flex-direction: row; /* Switch to horizontal layout on larger screens */
+    justify-content: space-evenly; /* Evenly distribute space between items */
+  }
+
+  .side_image {
+    max-width: 40%; /* Adjust width for larger screens if needed */
+    margin-bottom: 0; /* Remove margin bottom for larger screens */
+  }
+
+  .login {
+    margin-top: 0; /* Reset margin-top */
+    margin-left: 0; /* Reset margin-left */
+    position: static; /* Reset position */
+  }
+}
+
+.login h1{
+  padding-left: 40%;
+  font-size: 20px;
+}
+
+/* CSS for arranging two inputs in one line */
+.form-group {
+  display: flex; /* Use flexbox to arrange children in a row */
+  align-items: center; /* Align items vertically in the center */
+  margin: 5px; /* Add margin at the bottom for spacing */
+}
+
+.form-group input {
+  flex: 1; /* Allow inputs to grow and share available space */
+  margin-right: 20px; /* Add spacing between inputs */
+}
+
+.form-group input:last-child {
+  margin-right: 0; /* Remove margin from the last input to prevent extra space */
+}
+
+
+::placeholder{
+  color: black;
+}
+
+input[type="email"],
+input[type="number"],
+input[type="text"] {
+  padding: 10px;
+  width: 100%;
+  border: none;
+  outline: none;
+  border-radius: 5px;
+  box-sizing: border-box;
+  margin: 8px 0;
+  border: 1px solid black;
+  /* background-color: rgb(135, 153, 235); */
+  height: auto;
+}
+
+
+button {
+  padding: 10px 20px;
+  background-color: green;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  margin: 0 auto; /* Centers the button horizontally */
+  display: block; /* Ensures the button is treated as a block-level element */
+  width: 50%;
+}
+
+.login p{
+  padding-left: 25%;
+}
+
+button:hover {
+  background-color: #4790dd;
+}
+
+
+
+
+
+/* Footer */
+footer {
+  background-color: #333;
+  color: #fff;
+  text-align: center;
+  padding: 5px 0; /* Adjust padding to reduce height */
+  position: fixed;
+  width: 100%;
+  bottom: 0;
+  line-height: 1.5; /* Adjust line-height for better readability */
+}
+
+footer  i{
+  margin: 10px ;
+  cursor: pointer;
+}
