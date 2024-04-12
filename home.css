@@ -124,23 +124,27 @@ body {
   width: 150px; /* Increased width */
   height: 150px; /* Increased height */
   display: flex;
-  /* justify-content: center;
-  align-items: center; */
+  justify-content: center;
+  align-items: center;
   font-size: 1.2em; /* Increased font size */
 }
 
-
-
-.cart_content{
-  margin-left: 5px;
-    margin-right: 5px;
+.cart_content {
+  display: flex;
+  flex-direction: column; /* Display items in a column */
+  align-items: center; /* Center items horizontally */
 }
-.cart_content img{
+
+.cart_content img {
   max-width: 80%;
   height: auto;
   background-size: cover;
   margin-top: 16px;
-  margin-bottom: 16px;
+  margin-bottom: 8px; /* Adjust margin as needed */
+}
+
+.cart_content h4 {
+  margin: 0; /* Remove default margin */
 }
 
 /* .cart_content  */
