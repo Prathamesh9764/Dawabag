@@ -2,79 +2,209 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
-        integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
-        crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <title>Login Page</title>
-    <link rel="stylesheet" href="styles.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <title>Dawabag</title>
+  <link rel="stylesheet" href="home.css">
 </head>
 
 <body>
-    <header>
-        <div class="navbar">
-            <div class="company_name">
-                <i class="fa-solid fa-prescription-bottle-medical"></i>
-                Dawabag
-            </div>
-            <div class="nav_content">
-                <a href="home.html">Home</a>
-                <a href="index.html">Login</a>
-                <a href="#">Contact</a>
-            </div>
-            <div class="cart_content">
-                <div class="cart_icon">
-                    <i class="fa-solid fa-cart-plus" style="color: #f9fafb;"></i>
-                </div> &nbsp;
-                <p>Cart</p>
-            </div>
-
-        </div>
-    </header>
-    <div class="container">
-        <div class="side_image">
-            <img src="image/bck-img-removebg-preview.png" alt="side image">
-        </div>
-        <div class="login">
-            <h1>Login</h1>
-            <form id="verificationForm">
-                <div class="form-group">
-                    <!-- <label for="DrugLicenseNumber">Drug License Number:</label><br> -->
-                    <input type="text" id="DrugLicenseNumber" name="DrugLicenseNumber" placeholder="Drug License Number" required>
-                </div>
-                <div class="form-group">
-                    <!-- <label for="DrugLicenseNumber">Drug License Number:</label><br> -->
-                    <input type="text" id="DrugLicenseNumber" name="DrugLicenseNumber" placeholder="Food License Number" required>
-                </div>
-                <div class="form-group">
-                    <!-- <label for="phoneNumber">Phone Number:</label><br> -->
-                    <input type="text" id="phoneNumber" name="phoneNumber" placeholder="Phone Number" required>
-                </div>
-                <div class="form-group">
-                    <button type="button" onclick="sendVerificationCode()">Send Verification Code</button>
-                </div>
-                <div class="form-group">
-                    <!-- <label for="verificationCode">Verification Code:</label><br> -->
-                    <input type="text" id="verificationCode" name="verificationCode" placeholder="Verification Code" required>
-                </div>
-                <div class="form-group">
-                    <button type="submit">Verify</button>
-                </div>
-                <p>Don't have an account?<a href="signup.html">Sign-Up.</a></p>
-            </form>
-        </div>
+  <!-- section 1 -->
+  <header>
+    <div class="navbar1">
+      <div class="company_name">
+        <i class="fa-solid fa-prescription-bottle-medical"></i>
+        Dawabag
+      </div>
+      <div class="nav_content">
+        <a href="index.html">Home</a>
+        <a href="login.html">Customer Login</a>
+        <a href="doctor.html">Doctor Login</a>
+        <a href="contact.html">Contact</a>
+      </div>
+      <div class="cart_content1">
+        <div class="cart_icon">
+          <i class="fa-solid fa-cart-plus" style="color: #f9fafb;"></i>
+        </div> &nbsp;
+        <a href="cart.html">Cart</a>
+      </div>
     </div>
 
-    <footer>
-        <!-- <p>&copy; 2024 MyWebsite. All rights reserved.</p> -->
-        <i class="fa-brands fa-instagram fa-lg"></i>
-        <i class="fa-brands fa-twitter fa-lg" style="color: #74C0FC;"></i>
-        <i class="fa-brands fa-pinterest fa-lg" style="color: #e81111;"></i>
-        <i class="fa-brands fa-facebook fa-lg" style="color: #74C0FC;"></i>
-    </footer>
+    <div class="navbar2">
+      <div class="itemlist">
+        <a href="#">Medicine</a>
+        <a href="#">Lab Tests</a>
 
-    <script src="script.js"></script>
+        <!-- <a href="#">Healthcare</a> -->
+        <select name="Healthcare" id="Healthcare">
+          <option value="0">Healthcare</option>
+          <option value="1">Elderly Care</option>
+          <!-- <option value="2">Personal Care</option>
+          <option value="3">Healthcare Devices</option>
+          <option value="4">Health Food and Drinks</option>
+          <option value="5">Skin Care</option>
+          <option value="6">Mother and Baby Care</option>
+          <option value="7">Fitness Supplements</option>
+          <option value="8">Vitamin Care</option> -->
+        </select>
+
+        <a href="#">Health Blogs</a>
+        <a href="#">Skin Care</a>
+        <a href="#">Offers</a>
+        <a href="">
+          <input type="text" placeholder="Search.." name="search">
+          <!-- <button type="submit"><i class="fa fa-search"></i></button> -->
+        </a>
+      </div>
+    </div>
+
+  </header>
+  <div class="home_image">
+    <img src="image/comp_50lac.jpg" alt="Nature" class="image" width="600" height="400">
+  </div>
+  <!-- Section 2 -->
+  <div class="container">
+    <div class="grid-container">
+      <!-- Generate 25 cards -->
+      <div class="card">
+        <div class="cart_content">
+          <img src="image/vicks.jpg" alt="">
+          <a href="#">Vicks VapoRub</a>
+          <p>Price: $10.00</p>
+          <button class="btn cart-btn" onclick="addToCart()">Add to Cart</button>
+        </div>
+      </div>
+      <div class="card">
+        <div class="cart_content">
+          <img src="image/acetaminophen injection.jpg" alt=""><br>
+          <a href="#">Acetaminophen Injection</a>
+          <p>Price: $30.00</p>
+          <button class="btn cart-btn" onclick="addToCart()">Add to Cart</button>
+        </div>
+      </div>
+      <div class="card">
+        <div class="cart_content thrid_cart">
+          <img src="image/Azilsartan.jpg" alt=""><br>
+          <a href="#">Azilsartan</a>
+          <p>Price: $20.00</p>
+          <button class="btn cart-btn" onclick="addToCart()">Add to Cart</button>
+        </div>
+      </div>
+      <div class="card">
+        <div class="cart_content">
+          <img src="image/BPmachine.jpg" alt=""><br>
+          <a href="#">BP Machine</a>
+          <p>Price: $10.00</p>
+          <button class="btn cart-btn" onclick="addToCart()">Add to Cart</button>
+        </div>
+      </div>
+      <div class="card">
+        <div class="cart_content">
+          <img src="image/Ciprofloxacin Eye Drops.png" alt=""><br>
+          <a href="#">Ciprofloxacin Eye Drops</a>
+          <p>Price: $10.00</p>
+          <button class="btn cart-btn" onclick="addToCart()">Add to Cart</button>
+        </div>
+      </div>
+      <div class="card">
+        <div class="cart_content">
+          <img src="image/crocin.jpg" alt=""><br>
+          <a href="#">Crocin</a>
+          <p>Price: $10.00</p>
+          <button class="btn cart-btn" onclick="addToCart()">Add to Cart</button>
+        </div>
+      </div>
+      <div class="card">
+        <div class="cart_content">
+          <img src="image/DIABEX CAPSULES.jpg" alt=""><br>
+          <a href="#">Diabex Capsules</a>
+          <p>Price: $10.00</p>
+          <button class="btn cart-btn" onclick="addToCart()">Add to Cart</button>
+        </div>
+      </div>
+      <div class="card">
+        <div class="cart_content">
+          <img src="image/Etoshine.jpg" alt=""><br>
+          <a href="#">Etoshine</a>
+          <p>Price: $10.00</p>
+          <button class="btn cart-btn" onclick="addToCart()">Add to Cart</button>
+        </div>
+      </div>
+      <div class="card">
+        <div class="cart_content">
+          <img src="image/follihair.jpg" alt=""><br>
+          <a href="#">Follihair</a>
+          <p>Price: $10.00</p>
+          <button class="btn cart-btn" onclick="addToCart()">Add to Cart</button>
+        </div>
+      </div>
+      <div class="card">
+        <div class="cart_content">
+          <img src="image/hairbless.jpg" alt=""><br>
+          <a href="#">Hairbless</a>
+          <p>Price: $10.00</p>
+          <button class="btn cart-btn" onclick="addToCart()">Add to Cart</button>
+        </div>
+      </div>
+      <div class="card">
+        <div class="cart_content  thrid_cart2">
+          <img src="image/Metformin.jpg" alt=""><br>
+          <a href="#">Metformin</a>
+          <p>Price: $10.00</p>
+          <button class="btn cart-btn" onclick="addToCart()">Add to Cart</button>
+        </div>
+      </div>
+      <div class="card">
+        <div class="cart_content">
+          <img src="image/moov.jpg" alt=""><br>
+          <a href="#">Moov</a>
+          <p>Price: $10.00</p>
+          <button class="btn cart-btn" onclick="addToCart()">Add to Cart</button>
+        </div>
+      </div>
+      <div class="card">
+        <div class="cart_content">
+          <img src="image/oximenter.jpg" alt=""><br>
+          <a href="#">Oximenter</a>
+          <p>Price: $10.00</p>
+          <button class="btn cart-btn" onclick="addToCart()">Add to Cart</button>
+        </div>
+      </div>
+      <div class="card">
+        <div class="cart_content">
+          <img src="image/thermometer.jpeg" alt=""><br>
+          <a href="#">Thermometer</a>
+          <p>Price: $10.00</p>
+          <button class="btn cart-btn" onclick="addToCart()">Add to Cart</button>
+        </div>
+      </div>
+      <div class="card">
+        <div class="cart_content">
+          <img src="image/zincovit.jpg" alt=""><br>
+          <a href="#">Zincovit</a>
+          <p>Price: $10.00</p>
+          <button class="btn cart-btn" onclick="addToCart()">Add to Cart</button>
+        </div>
+      </div>
+      <!-- Repeat for the remaining cards -->
+      <!-- You can also use JavaScript to generate cards dynamically -->
+    </div>
+  </div>
+
+
+  <!-- Section 3 -->
+  <footer>
+    <!-- <p>&copy; 2024 MyWebsite. All rights reserved.</p> -->
+    <i class="fa-brands fa-instagram fa-lg"></i>
+    <i class="fa-brands fa-twitter fa-lg" style="color: #74C0FC;"></i>
+    <i class="fa-brands fa-pinterest fa-lg" style="color: #e81111;"></i>
+    <i class="fa-brands fa-facebook fa-lg" style="color: #74C0FC;"></i>
+  </footer>
+
+  <script src="script.js"></script>
 </body>
 
 </html>
