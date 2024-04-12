@@ -21,7 +21,7 @@ function handleFormSubmission(event) {
     // For demonstration purposes, let's just log the verification code to the console
     alert("You are sucessfully Signup");
     console.log("Entered verification code:", enteredVerificationCode);
-    window.location.href = "home.html";
+    window.location.href = "login_after.html";
 
 }
 
