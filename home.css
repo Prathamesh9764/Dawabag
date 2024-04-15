@@ -168,7 +168,7 @@ body {
   border-radius: 8px;
   padding: 30px; /* Increased padding */
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  transition: transform 0.3s ease;
+  /* transition: transform 0.3s ease; */
   width: 150px; /* Increased width */
   height: auto; /* Increased height */
   display: flex;
